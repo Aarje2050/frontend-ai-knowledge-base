@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.API_URL || 'http://localhost:8000'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 
 // Types
 interface ChatResponse {
@@ -7,7 +7,7 @@ interface ChatResponse {
     id: number
     content: string
     score: number
-    metadata: any
+    metadata: Record<string, unknown>  // Changed from 'any'
   }>
   session_id: string
   timestamp: string

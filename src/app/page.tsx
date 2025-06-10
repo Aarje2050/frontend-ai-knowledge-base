@@ -60,23 +60,7 @@ export default function Home() {
         )}
       </div>
 
-      {/* Instructions */}
-      <div className="bg-blue-50 rounded-lg p-6">
-        <h3 className="text-lg font-medium text-blue-900 mb-2">
-          🚀 Phase 1 Testing Instructions
-        </h3>
-        <div className="text-blue-800 space-y-2">
-          <p>1. <strong>Upload Documents:</strong> Start by uploading 5-6 test documents using the upload tab</p>
-          <p>2. <strong>Wait for Processing:</strong> Documents need to be processed before you can chat with them</p>
-          <p>3. <strong>Test Queries:</strong> Try different types of questions to test accuracy:</p>
-          <ul className="list-disc list-inside ml-4 space-y-1">
-            <li>Specific fact queries: "What is the vacation policy?"</li>
-            <li>Complex questions: "How do performance reviews work?"</li>
-            <li>Comparison questions: "What are the different types of leave?"</li>
-          </ul>
-          <p>4. <strong>Check Sources:</strong> Verify that the AI is citing the correct documents and information</p>
-        </div>
-      </div>
+    
     </div>
   )
 }

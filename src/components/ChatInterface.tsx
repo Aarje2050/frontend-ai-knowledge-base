@@ -11,7 +11,7 @@ interface Message {
     id: number
     content: string
     score: number
-    metadata: any
+    metadata: Record<string, unknown>  // Changed from 'any'
   }>
   timestamp: Date
 }
@@ -78,11 +78,11 @@ export default function ChatInterface() {
     setSessionId(undefined)
   }
 
-  const formatMetadata = (metadata: any) => {
+  const formatMetadata = (metadata: Record<string, unknown>) => {
     const items = []
     if (metadata.filename) items.push(`File: ${metadata.filename}`)
     if (metadata.page) items.push(`Page: ${metadata.page}`)
-    if (metadata.chunk_index !== undefined) items.push(`Chunk: ${metadata.chunk_index + 1}`)
+    if (metadata.chunk_index !== undefined) items.push(`Chunk: ${Number(metadata.chunk_index) + 1}`)
     return items.join(' • ')
   }
 
@@ -113,10 +113,10 @@ export default function ChatInterface() {
             <div className="mt-4 text-sm text-left max-w-md mx-auto space-y-1">
               <p><strong>Try asking:</strong></p>
               <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>"What is the vacation policy?"</li>
-                <li>"How do performance reviews work?"</li>
-                <li>"What are the safety requirements?"</li>
-                <li>"Summarize the main points"</li>
+                <li>&quot;What is the vacation policy?&quot;</li>
+                <li>&quot;How do performance reviews work?&quot;</li>
+                <li>&quot;What are the safety requirements?&quot;</li>
+                <li>&quot;Summarize the main points&quot;</li>
               </ul>
             </div>
           </div>
