@@ -41,7 +41,7 @@ export default function Home() {
       <div className="bg-white rounded-lg shadow-sm">
         {activeTab === 'upload' && (
           <div className="p-6">
-            <h2 className="text-lg font-semibold mb-4">Upload Documents</h2>
+            <h2 className="text-lg font-semibold mb-4 text-gray-500">Upload Documents</h2>
             <p className="text-gray-600 mb-6">
               Upload your documents to start chatting with them. Supported formats: PDF, DOCX, TXT, MD
             </p>
@@ -51,7 +51,7 @@ export default function Home() {
         
         {activeTab === 'chat' && (
           <div className="p-6">
-            <h2 className="text-lg font-semibold mb-4">Chat with Your Documents</h2>
+            <h2 className="text-lg font-semibold mb-4  text-gray-500">Chat with Your Documents</h2>
             <p className="text-gray-600 mb-6">
               Ask questions about your uploaded documents. The AI will search through them and provide answers with source citations.
             </p>

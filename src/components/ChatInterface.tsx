@@ -110,20 +110,12 @@ export default function ChatInterface() {
           <div className="text-center text-gray-500 py-8">
             <div className="text-4xl mb-2">💬</div>
             <p>Ask me anything about your uploaded documents!</p>
-            <div className="mt-4 text-sm text-left max-w-md mx-auto space-y-1">
-              <p><strong>Try asking:</strong></p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>&quot;What is the vacation policy?&quot;</li>
-                <li>&quot;How do performance reviews work?&quot;</li>
-                <li>&quot;What are the safety requirements?&quot;</li>
-                <li>&quot;Summarize the main points&quot;</li>
-              </ul>
-            </div>
+      
           </div>
         )}
 
         {messages.map((message) => (
-          <div key={message.id} className="space-y-2">
+          <div key={message.id} className="space-y-2 text-gray-500">
             <div
               className={`chat-message ${
                 message.type === 'user' ? 'user-message' : 'ai-message'
@@ -185,7 +177,7 @@ export default function ChatInterface() {
 
       {/* Input */}
       <form onSubmit={handleSubmit} className="p-4 border-t bg-gray-50">
-        <div className="flex space-x-2">
+        <div className="flex space-x-2  text-gray-500">
           <input
             type="text"
             value={input}
